@@ -1,21 +1,19 @@
+"use client";
+
 import React from "react";
 import "../styles/globals.css";
+import {Breadcrumb} from "@material-tailwind/react";
+import { usePathname  } from "next/navigation";
 
-export const metadata = {
-    title: 'Silly Site',
-    description: 'My homepage',
-};
+export default function RootLayout({ children } : { children: React.ReactNode }) {
+    const pathname = usePathname(); // Get current path using usePathname
+    const pathSegments = pathname.split("/").filter(Boolean); // Split path by slashes and remove empty segments
 
-export default function RootLayout({
-                                       children,
-                                   }: {
-    children: React.ReactNode;
-}) {
     return (
         <html lang="en">
         <head>
-            <title>{metadata.title}</title>
-            <meta name="description" content={metadata.description} />
+            <title>{'Silly Site'}</title>
+            <meta name="description" content={'My homepage'} />
         </head>
         <body className="min-h-screen text-white">
         {/* Outer container to center content */}
@@ -25,6 +23,28 @@ export default function RootLayout({
 
             {/* Middle solid color block */}
             <div className="w-3/5 bg-neutral-700 p-6 rounded-lg mt-10">
+                {/* Breadcrumbs at the top */}
+                <Breadcrumb>
+                    {/* Home link */}
+                    <Breadcrumb.Link href="/" className="text-white">
+                        Home
+                    </Breadcrumb.Link>
+                    <Breadcrumb.Separator />
+
+                    {/* Dynamically create breadcrumbs based on the current path */}
+                    {pathSegments.map((segment, index) => {
+                        const linkPath = "/" + pathSegments.slice(0, index + 1).join("/");
+
+                        return (
+                            <React.Fragment key={index}>
+                                <Breadcrumb.Link href={linkPath} className="text-white">
+                                    {segment.charAt(0).toUpperCase() + segment.slice(1)} {/* Capitalize first letter */}
+                                </Breadcrumb.Link>
+                                {index < pathSegments.length - 1 && <Breadcrumb.Separator />} {/* Add separator except after the last item */}
+                            </React.Fragment>
+                        );
+                    })}
+                </Breadcrumb>
                 {/* Child container now inherits the background */}
                 <div className="p-6">{children}</div>
             </div>
