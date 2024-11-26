@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from 'remark'
 import html from 'remark-html'
-import {notFound} from "next/navigation";
+import { notFound } from "next/navigation";
 
 const postsDirectory = path.join(process.cwd(), "src/content/posts");
 
@@ -47,7 +47,7 @@ export async function getPostBySlug(slug: string) {
             data,
             content: contentHtml,
         };
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
         notFound()
     }

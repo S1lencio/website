@@ -2,10 +2,10 @@
 
 import React from "react";
 import "../styles/globals.css";
-import {Breadcrumb} from "@material-tailwind/react";
-import { usePathname  } from "next/navigation";
+import { Breadcrumb } from "@material-tailwind/react";
+import { usePathname } from "next/navigation";
 
-export default function RootLayout({ children } : { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     const pathname = usePathname(); // Get current path using usePathname
     const pathSegments = pathname.split("/").filter(Boolean); // Split path by slashes and remove empty segments
 
@@ -28,7 +28,7 @@ export default function RootLayout({ children } : { children: React.ReactNode })
                 <Breadcrumb>
                     {/* Home link */}
                     <Breadcrumb.Link href="/" className="text-gray-200 hover:text-gray-400">Home</Breadcrumb.Link>
-                    <Breadcrumb.Separator />
+                    <Breadcrumb.Separator/>
 
                     {/* Dynamically create breadcrumbs based on the current path */}
                     {pathSegments.map((segment, index) => {
@@ -39,7 +39,8 @@ export default function RootLayout({ children } : { children: React.ReactNode })
                                 <Breadcrumb.Link href={linkPath} className="text-gray-200 hover:text-gray-400">
                                     {segment.charAt(0).toUpperCase() + segment.slice(1)} {/* Capitalize first letter */}
                                 </Breadcrumb.Link>
-                                {index < pathSegments.length - 1 && <Breadcrumb.Separator />} {/* Add separator except after the last item */}
+                                {/* Add separator except after the last item */}
+                                {index < pathSegments.length - 1 && <Breadcrumb.Separator/>}
                             </React.Fragment>
                         );
                     })}

@@ -15,10 +15,10 @@ export default async function BlogPost({ params }: PageProps) {
             <p className="text-gray-400 text-sm mb-6">{new Date(data.date).toLocaleDateString()}</p>
 
             {/* Horizontal separator */}
-            <hr className="my-6 border-t-2 border-neutral-500" />
+            <hr className="my-6 border-t-2 border-neutral-500"/>
 
             <article className="prose prose-invert max-w-none">
-                <div dangerouslySetInnerHTML={{ __html: content }} />
+                <div dangerouslySetInnerHTML={{ __html: content }}/>
             </article>
         </div>
     );

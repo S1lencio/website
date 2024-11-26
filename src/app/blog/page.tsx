@@ -12,7 +12,8 @@ export default function BlogPage() {
                     <li key={post.slug} className="bg-neutral-800 p-4 rounded-md shadow-md">
                         <h2 className="text-xl font-semibold">{post.title}</h2>
                         <p className="text-gray-400 text-sm">{new Date(post.date).toLocaleDateString()}</p>
-                        <Link href={`/blog/${post.slug}`} className="text-indigo-500 hover:text-indigo-600 transition-colors">
+                        <Link href={`/blog/${post.slug}`}
+                              className="text-indigo-500 hover:text-indigo-600 transition-colors">
                             Read More
                         </Link>
                     </li>
