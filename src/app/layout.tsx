@@ -15,9 +15,9 @@ export default function RootLayout({ children } : { children: React.ReactNode })
             <title>{'Silly Site'}</title>
             <meta name="description" content={'My homepage'} />
         </head>
-        <body className="min-h-screen text-white">
+        <body>
         {/* Outer container to center content */}
-        <div className="flex min-h-screen bg-neutral-900">
+        <div className="flex bg-neutral-900">
             {/* Left gradient block */}
             <div className="w-1/5 bg-gradient-to-r from-zinc-800 to-neutral-900 to-90%"></div>
 
@@ -26,9 +26,7 @@ export default function RootLayout({ children } : { children: React.ReactNode })
                 {/* Breadcrumbs at the top */}
                 <Breadcrumb>
                     {/* Home link */}
-                    <Breadcrumb.Link href="/" className="text-white">
-                        Home
-                    </Breadcrumb.Link>
+                    <Breadcrumb.Link href="/" className="text-gray-200">Home</Breadcrumb.Link>
                     <Breadcrumb.Separator />
 
                     {/* Dynamically create breadcrumbs based on the current path */}
@@ -37,7 +35,7 @@ export default function RootLayout({ children } : { children: React.ReactNode })
 
                         return (
                             <React.Fragment key={index}>
-                                <Breadcrumb.Link href={linkPath} className="text-white">
+                                <Breadcrumb.Link href={linkPath} className="text-gray-200">
                                     {segment.charAt(0).toUpperCase() + segment.slice(1)} {/* Capitalize first letter */}
                                 </Breadcrumb.Link>
                                 {index < pathSegments.length - 1 && <Breadcrumb.Separator />} {/* Add separator except after the last item */}
@@ -46,7 +44,7 @@ export default function RootLayout({ children } : { children: React.ReactNode })
                     })}
                 </Breadcrumb>
                 {/* Child container */}
-                <div className="mt-5">{children}</div>
+                <div className="text-gray-200">{children}</div>
             </div>
 
             {/* Right gradient block */}
