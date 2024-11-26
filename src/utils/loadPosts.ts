@@ -1,6 +1,9 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { remark } from 'remark'
+import html from 'remark-html'
+import {notFound} from "next/navigation";
 
 const postsDirectory = path.join(process.cwd(), "src/content/posts");
 
@@ -27,13 +30,25 @@ export function getAllPosts(): Post[] {
     }) as Post[];
 }
 
-export function getPostBySlug(slug: string) {
-    const fullPath = path.join(postsDirectory, `${slug}.md`);
-    const fileContents = fs.readFileSync(fullPath, "utf-8");
-    const { data, content } = matter(fileContents); // Extract frontmatter and content
+export async function getPostBySlug(slug: string) {
+    const fullPath = path.join(postsDirectory, `${slug}.md`)
 
-    return {
-        data,
-        content,
-    };
+    // Check if the file exists before trying to read it
+    try {
+        const fileContents = fs.readFileSync(fullPath, "utf-8")
+        const { data, content } = matter(fileContents) // Extract frontmatter and content
+
+        const htmlContent = await remark()
+            .use(html)
+            .process(content)
+        const contentHtml = htmlContent.toString()
+
+        return {
+            data,
+            content: contentHtml,
+        };
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (error) {
+        notFound()
+    }
 }
