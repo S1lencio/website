@@ -8,7 +8,7 @@ export default function ProjectsPage() {
     return (
         <div>
             <h1 className="text-2xl">Me do silly things :3</h1>
-            <h2 className="mt-2">Here are some of the projects I have worked on.</h2>
+            <p className="mt-2">Here are some of the projects I have worked on.</p>
 
             <div className="mt-8">
                 {projects.map((project, index) => (
