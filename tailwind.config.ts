@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import { mtConfig } from "@material-tailwind/react";
+import typography from "@tailwindcss/typography";
 
 const config: Config = {
   content: [
@@ -16,7 +17,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [mtConfig],
+  plugins: [mtConfig, typography],
 };
 
 export default config;
