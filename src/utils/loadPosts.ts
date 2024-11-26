@@ -30,6 +30,16 @@ export function getAllPosts(): Post[] {
     }) as Post[];
 }
 
+export function getAllSlugs() {
+    // Read all files in the posts directory
+    const fileNames = fs.readdirSync(postsDirectory);
+
+    // Remove the ".md" extension to get the slug
+    return fileNames
+        .filter((fileName) => fileName.endsWith(".md"))
+        .map((fileName) => fileName.replace(/\.md$/, ""));
+}
+
 export async function getPostBySlug(slug: string) {
     const fullPath = path.join(postsDirectory, `${slug}.md`)
 
