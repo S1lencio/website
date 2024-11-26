@@ -1,7 +1,17 @@
-import { getPostBySlug } from "@/utils/loadPosts";
+import { getAllSlugs, getPostBySlug } from "@/utils/loadPosts";
 
 interface PageProps {
     params: Promise<{ slug: string }>;
+}
+
+export async function generateStaticParams() {
+    // Fetch all available slugs
+    const slugs = await getAllSlugs();
+
+    // Return an array of params objects
+    return slugs.map((slug) => ({
+        slug,
+    }));
 }
 
 export default async function BlogPost({ params }: PageProps) {
