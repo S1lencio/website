@@ -1,18 +1,17 @@
 import React from "react";
 
-// Define the link type and the label for each type
 const linkTypeLabels: { [key: string]: string } = {
     github: "GitHub",
     modrinth: "Modrinth",
     demo: "Live Demo",
     docs: "Documentation",
-    // Add other types as needed
+    blog: "Blog Post",
 };
 
 interface ProjectProps {
     title: string;
     description: string;
-    links: { url: string; type: string }[]; // type is added to each link
+    links: { url: string; type: string }[];
 }
 
 const ProjectCard: React.FC<ProjectProps> = ({ title, description, links }) => {
