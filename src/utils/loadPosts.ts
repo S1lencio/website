@@ -2,32 +2,38 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const postsDirectory = path.join(process.cwd(), "src/app/blog/posts");
+const postsDirectory = path.join(process.cwd(), "src/content/posts");
 
-export function getAllPosts() {
+interface Post {
+    slug: string;
+    title: string;
+    date: string;
+}
+
+
+export function getAllPosts(): Post[] {
     const fileNames = fs.readdirSync(postsDirectory);
 
-    const posts = fileNames.map((fileName) => {
-        const filePath = path.join(postsDirectory, fileName);
-        const fileContents = fs.readFileSync(filePath, "utf-8");
-
-        const { data, content } = matter(fileContents);
+    return fileNames.map((fileName) => {
+        const slug = fileName.replace(/\.md$/, ""); // Remove .md extension
+        const fullPath = path.join(postsDirectory, fileName);
+        const fileContents = fs.readFileSync(fullPath, "utf-8");
+        const { data } = matter(fileContents); // Extract frontmatter
 
         return {
-            slug: fileName.replace(/\.md$/, ""),
-            ...data, // Includes frontmatter (title, date, etc.)
-            content, // Markdown content
+            slug,
+            ...data, // Include title and date from frontmatter
         };
-    });
-
-    return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    }) as Post[];
 }
 
 export function getPostBySlug(slug: string) {
-    const filePath = path.join(postsDirectory, `${slug}.md`);
-    const fileContents = fs.readFileSync(filePath, "utf-8");
+    const fullPath = path.join(postsDirectory, `${slug}.md`);
+    const fileContents = fs.readFileSync(fullPath, "utf-8");
+    const { data, content } = matter(fileContents); // Extract frontmatter and content
 
-    const { data, content } = matter(fileContents);
-
-    return { slug, ...data, content };
+    return {
+        data,
+        content,
+    };
 }
