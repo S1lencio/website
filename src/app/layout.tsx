@@ -17,7 +17,7 @@ export default function RootLayout({ children } : { children: React.ReactNode })
         </head>
         <body>
         {/* Outer container to center content */}
-        <div className="flex bg-neutral-900">
+        <div className="flex min-h-screen bg-neutral-900">
             {/* Left gradient block */}
             <div className="w-1/5 bg-gradient-to-r from-zinc-800 to-neutral-900 to-90%"></div>
 
@@ -44,7 +44,7 @@ export default function RootLayout({ children } : { children: React.ReactNode })
                     })}
                 </Breadcrumb>
                 {/* Child container */}
-                <div className="text-gray-200">{children}</div>
+                <div className="text-gray-200 p-6">{children}</div>
             </div>
 
             {/* Right gradient block */}

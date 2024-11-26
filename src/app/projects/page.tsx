@@ -6,9 +6,9 @@ import projects from "./projects";
 
 export default function ProjectsPage() {
     return (
-        <div className="min-h-screen p-6">
+        <div>
             <h1 className="text-2xl">Me do silly things :3</h1>
-            <h2 className="mt-2 font-bold">Here are some of the projects I have worked on.</h2>
+            <h2 className="mt-2">Here are some of the projects I have worked on.</h2>
 
             <div className="mt-8">
                 {projects.map((project, index) => (
