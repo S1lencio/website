@@ -26,7 +26,7 @@ export default function RootLayout({ children } : { children: React.ReactNode })
                 {/* Breadcrumbs at the top */}
                 <Breadcrumb>
                     {/* Home link */}
-                    <Breadcrumb.Link href="/" className="text-gray-200">Home</Breadcrumb.Link>
+                    <Breadcrumb.Link href="/" className="text-gray-200 hover:text-gray-400">Home</Breadcrumb.Link>
                     <Breadcrumb.Separator />
 
                     {/* Dynamically create breadcrumbs based on the current path */}
@@ -35,7 +35,7 @@ export default function RootLayout({ children } : { children: React.ReactNode })
 
                         return (
                             <React.Fragment key={index}>
-                                <Breadcrumb.Link href={linkPath} className="text-gray-200">
+                                <Breadcrumb.Link href={linkPath} className="text-gray-200 hover:text-gray-400">
                                     {segment.charAt(0).toUpperCase() + segment.slice(1)} {/* Capitalize first letter */}
                                 </Breadcrumb.Link>
                                 {index < pathSegments.length - 1 && <Breadcrumb.Separator />} {/* Add separator except after the last item */}
