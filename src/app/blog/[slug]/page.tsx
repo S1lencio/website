@@ -1,6 +1,10 @@
 import { getPostBySlug } from "@/utils/loadPosts";
 
-export default async function BlogPost({ params }: { params: { slug: string } }) {
+interface PageProps {
+    params: Promise<{ slug: string }>;
+}
+
+export default async function BlogPost({ params }: PageProps) {
     const { slug } = await params;
     // Fetch the post content and metadata
     const { data, content } = await getPostBySlug(slug);

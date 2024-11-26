@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -14,19 +15,19 @@ export default function Page() {
           </h2>
 
           <h2 className="mt-8">
-              You might want to look through my <a href="/projects" className="text-indigo-500 hover:text-indigo-600 transition-colors">projects</a>.
+              You might want to look through my <Link  href="/projects" className="text-indigo-500 hover:text-indigo-600 transition-colors">projects</Link>.
           </h2>
           <h2>
-              If you want to contact me, check out the <a href="/contact" className="text-indigo-500 hover:text-indigo-600 transition-colors">contact</a> page.
+              If you want to contact me, check out the <Link  href="/contact" className="text-indigo-500 hover:text-indigo-600 transition-colors">contact</Link> page.
           </h2>
           <h2>
-              If you want to know more about me, check out the <a href="/about" className="text-indigo-500 hover:text-indigo-600 transition-colors">about</a> page.
+              If you want to know more about me, check out the <Link  href="/about" className="text-indigo-500 hover:text-indigo-600 transition-colors">about</Link> page.
           </h2>
           <h2>
-              Also check out my <a href="/links" className="text-indigo-500 hover:text-indigo-600 transition-colors">links</a>!
+              Also check out my <Link  href="/links" className="text-indigo-500 hover:text-indigo-600 transition-colors">links</Link>!
           </h2>
           <h2>
-              If you want to see my <a href="/blog" className="text-indigo-500 hover:text-indigo-600 transition-colors">blog</a>, you can do so here.
+              If you want to see my <Link  href="/blog" className="text-indigo-500 hover:text-indigo-600 transition-colors">blog</Link>, you can do so here.
           </h2>
       </div>
   );
