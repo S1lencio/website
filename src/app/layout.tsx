@@ -45,8 +45,8 @@ export default function RootLayout({ children } : { children: React.ReactNode })
                         );
                     })}
                 </Breadcrumb>
-                {/* Child container now inherits the background */}
-                <div className="p-6">{children}</div>
+                {/* Child container */}
+                <div className="mt-5">{children}</div>
             </div>
 
             {/* Right gradient block */}

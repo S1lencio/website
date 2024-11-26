@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'MesloLGM Nerd Font';
+    src: url('/fonts/MesloLGMNerdFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MesloLGM Nerd Font';
+    src: url('/fonts/MesloLGMNerdFont-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MesloLGM Nerd Font';
+    src: url('/fonts/MesloLGMNerdFont-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'MesloLGM Nerd Font';
+    src: url('/fonts/MesloLGMNerdFont-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+body, code, pre {
+    @apply font-meslo;
+}

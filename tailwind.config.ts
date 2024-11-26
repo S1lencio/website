@@ -9,7 +9,13 @@ const config: Config = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@material-tailwind/react/**/*.{js,ts,jsx,tsx}"
   ],
-  theme: {},
+  theme: {
+    extend: {
+      fontFamily: {
+        meslo: ['"MesloLGM Nerd Font"', 'monospace'],
+      },
+    },
+  },
   plugins: [mtConfig],
 };
 
