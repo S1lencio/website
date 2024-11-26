@@ -3,6 +3,7 @@ import React from "react";
 const linkTypeLabels: { [key: string]: string } = {
     github: "GitHub",
     modrinth: "Modrinth",
+    spigot: "Spigot",
     demo: "Live Demo",
     docs: "Documentation",
     blog: "Blog Post",
