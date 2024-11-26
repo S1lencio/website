@@ -13,7 +13,8 @@ export default function RootLayout({ children } : { children: React.ReactNode })
         <html lang="en">
         <head>
             <title>{'Silly Site'}</title>
-            <meta name="description" content={'My homepage'} />
+            <meta name="description" content={'My homepage'}/>
+            <link rel="icon" href="/favicon.gif"/>
         </head>
         <body>
         {/* Outer container to center content */}
