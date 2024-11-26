@@ -22,7 +22,7 @@ export default function RootLayout({ children } : { children: React.ReactNode })
             <div className="w-1/5 bg-gradient-to-r from-zinc-800 to-neutral-900 to-90%"></div>
 
             {/* Middle solid color block */}
-            <div className="w-3/5 bg-neutral-700 p-6 rounded-lg mt-10">
+            <div className="w-3/5 bg-neutral-700 p-6 rounded-t-md mt-10">
                 {/* Breadcrumbs at the top */}
                 <Breadcrumb>
                     {/* Home link */}
