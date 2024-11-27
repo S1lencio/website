@@ -7,9 +7,9 @@ const contactLinks = [
     },
     {
         platform: "Matrix",
-        url: "https://matrix.to/#/@silencio:devlencio.net",
+        url: "https://matrix.to/#/@devlencio:matrix.org",
         icon: "[m]",
-        name: "@silencio:devlencio.net"
+        name: "@devlencio:matrix.org"
     },
     {
         platform: "GitHub",
