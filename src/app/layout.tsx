@@ -14,6 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <head>
             <title>{'Silly Site'}</title>
             <meta name="description" content={'My homepage'}/>
+            <meta name="robots" content="noindex, nofollow"/>
             <link rel="icon" href="/favicon.gif"/>
         </head>
         <body>

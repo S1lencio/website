@@ -30,7 +30,7 @@ export default function Page() {
             </h2>
 
             <h2 className="mt-8">
-                This page will grow and evolve alongside myself over time, and I have a lot of time to spend on useless
+                This page will grow and evolve over time, and I have a lot of time to spend on useless
                 and irrelevant projects.
             </h2>
         </div>
