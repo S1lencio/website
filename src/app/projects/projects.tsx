@@ -1,7 +1,7 @@
 const projects = [
     {
         title: "No Join Leave Message",
-        description: "Quick and dirty Minecraft mod that disabled joining and leaving messages.",
+        description: "Quick and dirty Minecraft Fabric mod that disabled joining and leaving messages.",
         links: [
             { url: "https://github.com/S1lencio/No-Join-Leave-Message", type: "github" },
             { url: "https://modrinth.com/mod/no-join-leave-messages", type: "modrinth" },
@@ -31,7 +31,7 @@ const projects = [
     },
     {
         title: "ActiveCraft-Core",
-        description: "This Minecraft plugin was my first time working with Java and Spigot. It was a fun project to work on and I learned a lot. It also probably doesnt work.",
+        description: "This Minecraft plugin was my first time working with Java. It was a fun project to work on and I learned a lot. It also probably doesnt work.",
         links: [
             { url: "https://github.com/ActiveCraftPlugins/ActiveCraft-Core", type: "github" },
             { url: "https://www.spigotmc.org/resources/activecraft-core.95488/", type: "spigot" },
