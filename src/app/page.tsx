@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Magic8Ball from "@/components/8ballCard";
 
 export default function Page() {
     return (
@@ -33,6 +34,7 @@ export default function Page() {
                 This page will grow and evolve over time, and I have a lot of time to spend on useless
                 and irrelevant projects.
             </h2>
+            <Magic8Ball />
         </div>
     );
 }
