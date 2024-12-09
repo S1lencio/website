@@ -34,7 +34,7 @@ const QuoteCard = () => {
                         href={permalink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-indigo-400 hover:underline"
+                        className="text-indigo-500 hover:text-indigo-600 transition-colors"
                     >
                         Source
                     </a>

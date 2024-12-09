@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, description, links }) => {
                             href={link.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-500 hover:text-blue-700 mr-4"
+                            className="mr-4"
                         >
                             {/* Render the brackets with a different color */}
                             <span className="text-gray-400">[ </span>
