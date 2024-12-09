@@ -9,16 +9,29 @@ const linkTypeLabels: { [key: string]: string } = {
     blog: "Blog Post",
 };
 
+const langaugeLabels: { [key: string]: string } = {
+    python: "",
+    java: "",
+    javascript: "",
+    typescript: "󰛦",
+}
+
 interface ProjectProps {
     title: string;
+    language: string,
     description: string;
     links: { url: string; type: string }[];
 }
 
-const ProjectCard: React.FC<ProjectProps> = ({ title, description, links }) => {
+const ProjectCard: React.FC<ProjectProps> = ({ title, description, links, language }) => {
+    const lang = langaugeLabels[language] || ""; // Get the label based on the language
+
     return (
         <div className="bg-neutral-800 p-6 rounded-lg shadow-md mb-4">
-            <h3 className="text-xl font-semibold">{title}</h3>
+            <div className="text-xl">
+                <span className="font-semibold">{title}</span>
+                <span title={language} className="ml-4 text-indigo-500">{lang}</span>
+            </div>
             <p className="mt-2">{description}</p>
             <div className="mt-4">
                 {links.map((link, index) => {

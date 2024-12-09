@@ -1,6 +1,7 @@
 const projects = [
     {
         title: "No Join Leave Message",
+        language: "java",
         description: "Quick and dirty Minecraft Fabric mod that disabled joining and leaving messages.",
         links: [
             { url: "https://github.com/S1lencio/No-Join-Leave-Message", type: "github" },
@@ -9,6 +10,7 @@ const projects = [
     },
     {
         title: "Harder Dragon",
+        language: "java",
         description: "Small Minecraft Paper plugin that makes the dragon fight harder.",
         links: [
             { url: "https://github.com/S1lencio/Harder-Dragon", type: "github" },
@@ -17,6 +19,7 @@ const projects = [
     },
     {
         title: "Bad Discord Bot",
+        language: "python",
         description: "A very bad and probably non functional Discord bot written in Python. The Framework I made is really nice :)",
         links: [
             { url: "https://github.com/S1lencio/DiscordBot", type: "github" },
@@ -24,6 +27,7 @@ const projects = [
     },
     {
         title: "Neon",
+        language: "java",
         description: "A Minecraft Fabric hacked client that I made to play on LiveOverflow's server. A lot of this code is 'borrowed' from other clients as this was my learning project.",
         links: [
             { url: "https://github.com/S1lencio/neon", type: "github" },
@@ -31,6 +35,7 @@ const projects = [
     },
     {
         title: "ActiveCraft-Core",
+        language: "java",
         description: "This Minecraft plugin was my first time working with Java. It was a fun project to work on and I learned a lot. It also probably doesnt work.",
         links: [
             { url: "https://github.com/ActiveCraftPlugins/ActiveCraft-Core", type: "github" },
