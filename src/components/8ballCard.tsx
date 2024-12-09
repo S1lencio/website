@@ -24,7 +24,7 @@ const Magic8Ball = () => {
     };
 
     return (
-        <div className="flex justify-between items-center bg-neutral-800 p-4 rounded-lg shadow-lg pt-12 pb-12 mt-8">
+        <div className="flex justify-between items-center bg-neutral-800 p-4 rounded-lg shadow-lg mt-8">
             <div className="flex flex-col items-center justify-center ml-4">
                 <h2 className="text-2xl font-semibold mb-4">Magic 8-Ball</h2>
                 <input
@@ -35,7 +35,7 @@ const Magic8Ball = () => {
                     className="px-4 py-2 border rounded-lg focus:outline-none bg-neutral-800"
                 />
             </div>
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-36 h-36 bg-black rounded-full flex justify-center items-center text-center text-lg ring-2 ring-neutral-900">
+            <div className="ml-6 mr-6 w-36 h-36 bg-black rounded-full flex items-center text-center text-lg ring-2 ring-neutral-900">
                 {answer || "Ask me anything!"}
             </div>
             <button
