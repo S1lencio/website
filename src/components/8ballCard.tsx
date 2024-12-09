@@ -35,7 +35,8 @@ const Magic8Ball = () => {
                     className="px-4 py-2 border rounded-lg focus:outline-none bg-neutral-800"
                 />
             </div>
-            <div className="ml-6 mr-6 w-36 h-36 bg-black rounded-full flex items-center text-center text-lg ring-2 ring-neutral-900">
+            <div
+                className="ml-6 mr-6 w-36 h-36 bg-black rounded-full flex items-center text-center text-lg ring-2 ring-neutral-900">
                 {answer || "Ask me anything!"}
             </div>
             <button
