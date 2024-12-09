@@ -13,7 +13,9 @@ const langaugeLabels: { [key: string]: string } = {
     python: "",
     java: "",
     javascript: "",
-    typescript: "󰛦",
+    typescript: "",
+    nextjs: "",
+    nestjs: "",
 }
 
 interface ProjectProps {
