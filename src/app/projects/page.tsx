@@ -4,6 +4,7 @@ import React from "react";
 import ProjectCard from "../../components/ProjectCard";
 import projects from "./projects";
 import maintaining from "./maintaining";
+import Image from "next/image";
 
 export default function ProjectsPage() {
     return (
@@ -24,6 +25,14 @@ export default function ProjectsPage() {
                     <ProjectCard key={index} {...project} />
                 ))}
             </div>
+
+            <Image
+                src="/cdn/itsallminecraft.png"
+                alt="Always has been."
+                width={500}
+                height={500}
+                className="rounded-lg shadow-lg mx-auto mt-8"
+            />
         </div>
     );
 }
