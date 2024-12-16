@@ -13,18 +13,18 @@ const MainPageTextCard = () => {
             </h2>
 
             <h2 className="mt-8">
-                You might want to look through my <Link href="/projects"
-                                                        className="text-indigo-500 hover:text-indigo-600 transition-colors">projects</Link>.
+                You might want to look through my
+                <Link href="/projects" className="text-indigo-500 hover:text-indigo-600 transition-colors"> projects</Link>.
             </h2>
             <h2>
-                If you want to contact me, check out the <Link href="/about"
-                                                               className="text-indigo-500 hover:text-indigo-600 transition-colors">about me</Link> page.
+                If you want to contact me, check out the
+                <Link href="/about" className="text-indigo-500 hover:text-indigo-600 transition-colors"> about me </Link>
+                page.
             </h2>
             <h2>
-                I have a <Link href="/blog"
-                               className="text-indigo-500 hover:text-indigo-600 transition-colors">blog</Link>, because
-                of
-                course I do.
+                I have a
+                <Link href="/blog" className="text-indigo-500 hover:text-indigo-600 transition-colors"> blog</Link>,
+                because of course I do.
             </h2>
             <h2 className="mt-8">
                 This page will grow and evolve over time, and I have a lot of time to spend on useless

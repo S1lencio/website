@@ -26,8 +26,8 @@ export default function ContactsPage() {
             <h1 className="text-2xl mt-16">Public keys</h1>
             <p className="mt-2">As of now, the GPG key used only to sign Github commits.</p>
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <GPGCard />
-                <SSHCard />
+                <GPGCard/>
+                <SSHCard/>
             </div>
         </div>
     );

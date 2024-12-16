@@ -36,7 +36,7 @@ const Magic8Ball = () => {
                 />
             </div>
             <div
-                className="ml-6 mr-6 w-36 h-36 bg-black rounded-full flex items-center text-center text-lg ring-2 ring-neutral-900">
+                className="ml-6 mr-6 w-36 h-36 bg-black rounded-full flex items-center justify-center text-center text-lg ring-2 ring-neutral-900">
                 {answer || "Ask me anything!"}
             </div>
             <button
