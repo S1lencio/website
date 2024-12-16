@@ -88,7 +88,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <title>{'Silly Site'}</title>
             <meta name="description" content="Silly things happen here"/>
             <meta name="robots" content="noindex, nofollow"/>
-            <link rel="icon" href="/favicon.gif"/>
+
+            {/* Attempt to use the GIF favicon */}
+            <link id="favicon" rel="icon" href="/favicon.gif" />
+
+            {/* Fallback to ICO if GIF fails */}
+            <script
+                dangerouslySetInnerHTML={{
+                    __html: `
+                                (function() {
+                                    const testFavicon = new Image();
+                                    testFavicon.src = '/favicon.gif';
+
+                                    testFavicon.onerror = function() {
+                                        console.error('Fallback to favicon.ico');
+                                        document.getElementById('favicon').setAttribute('href', '/favicon.ico');
+                                    };
+                                })();
+                            `,
+                }}
+            />
 
             <meta property="og:title" content="Devlencio"/>
             <meta property="og:description" content="Click for free robux!!!1"/>
