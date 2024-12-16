@@ -17,8 +17,8 @@ const MainPageTextCard = () => {
                                                         className="text-indigo-500 hover:text-indigo-600 transition-colors">projects</Link>.
             </h2>
             <h2>
-                If you want to contact me, check out the <Link href="/contact"
-                                                               className="text-indigo-500 hover:text-indigo-600 transition-colors">contact</Link> page.
+                If you want to contact me, check out the <Link href="/about"
+                                                               className="text-indigo-500 hover:text-indigo-600 transition-colors">about me</Link> page.
             </h2>
             <h2>
                 I have a <Link href="/blog"

@@ -16,13 +16,13 @@ const ContactCard: React.FC<ContactCardProps> = ({ platform, url, icon, name }) 
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-600"
+                    className="text-blue-400 hover:text-blue-600 transition-colors"
                 >
                     {name}
                 </a>
             </div>
             {/* Nerd Font Icon */}
-            <div className="text-4xl text-blue-500 pr-4">{icon}</div>
+            <div className={`text-4xl text-blue-500 ${icon === "[m]" ? "" : "pr-4"}`}>{icon}</div>
         </div>
     );
 };
