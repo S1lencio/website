@@ -34,6 +34,14 @@ const projects = [
         ],
     },
     {
+        title: "Website",
+        language: "nextjs",
+        description: "This website is built with static Nextjs and deployed via Github Pages. This is my first time working with Nextjs or any frontend in general. I might make the repo public someday down the road, but for now it is private.",
+        links: [
+            { url: "https://github.com/S1lencio/website", type: "github" },
+        ],
+    },
+    {
         title: "ActiveCraft-Core",
         language: "java",
         description: "This Minecraft plugin was my first time working with Java. It was a fun project to work on and I learned a lot. It also probably doesnt work.",
