@@ -22,6 +22,10 @@ const Magic8Ball = () => {
     const shakeBall = () => {
         const randomResponse = responses[Math.floor(Math.random() * responses.length)];
         setAnswer(randomResponse);
+
+        // This is obfuscated to not reveal what input will trigger the response.
+        // Don't cheat, try to find it yourself!
+        if (question == "\x34\x32\x30") setAnswer("\x52\x6F\x6C\x6C\x20\x69\x74\x20\x42\x4F\x49\x49\x49\x21");
     };
 
     return (
