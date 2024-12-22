@@ -25,11 +25,11 @@ const Magic8Ball = () => {
     };
 
     return (
-        <GenericCard>
-            <div className="grid md:grid-cols-3 gap-4">
+        <GenericCard className="md:w-2/3">
+            <div className="flex flex-col sm:flex-row sm:space-x-4 gap-4 items-center justify-center">
                 {/* Column 1: Title and Input */}
-                <div className="flex flex-col items-center justify-center md:ml-6">
-                    <h2 className="text-2xl font-semibold mb-4">Magic 8-Ball</h2>
+                <div className="flex flex-col items-center justify-center sm:ml-2">
+                    <h2 className="text-2xl font-semibold mb-4 text-center sm:text-left">Magic 8-Ball</h2>
                     <input
                         type="text"
                         value={question}
@@ -40,7 +40,7 @@ const Magic8Ball = () => {
                 </div>
 
                 {/* Column 2: Answer Circle */}
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center sm:my-0 my-2">
                     <div
                         className="w-36 h-36 bg-black rounded-full flex items-center justify-center text-center text-lg ring-2 ring-neutral-900">
                         {answer || "Ask me anything!"}
@@ -48,16 +48,16 @@ const Magic8Ball = () => {
                 </div>
 
                 {/* Column 3: Button */}
-                <div className="flex items-center justify-center md:ml-4">
+                <div className="flex items-center md:pr-2">
                     <button
                         onClick={shakeBall}
-                        className="px-4 py-2 bg-indigo-500 rounded-lg shadow-md hover:bg-indigo-600 transition-all"
-                    >
+                        className="px-4 py-2 bg-indigo-500 rounded-lg shadow-md hover:bg-indigo-600 transition-all w-full">
                         Shake the Ball
                     </button>
                 </div>
             </div>
         </GenericCard>
+
     );
 
 };

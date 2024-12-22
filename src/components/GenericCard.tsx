@@ -7,7 +7,7 @@ type GenericCardProps = {
 
 const GenericCard = ({ children, className }: GenericCardProps) => {
     return (
-        <div className={`bg-neutral-800 p-4 rounded-lg shadow-lg mt-4 ${className}`}>
+        <div className={`bg-neutral-800 p-4 rounded-lg shadow-lg mt-4 overflow-x-hidden ${className}`}>
             {children}
         </div>
     );

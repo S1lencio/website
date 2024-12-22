@@ -30,7 +30,7 @@ const CounterCard = () => {
     }, []);
 
     return (
-        <GenericCard className="flex flex-col items-center">
+        <GenericCard className="flex flex-col items-center md:w-1/3">
             <h2 className="text-2xl font-semibold whitespace-nowrap">Big number go uppies</h2>
             <h2 className="text-lg mt-4">{count}</h2>
             <button
