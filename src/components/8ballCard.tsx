@@ -1,4 +1,5 @@
 import { useState } from "react";
+import GenericCard from "@/components/GenericCard";
 
 const Magic8Ball = () => {
     const [answer, setAnswer] = useState("");
@@ -24,29 +25,41 @@ const Magic8Ball = () => {
     };
 
     return (
-        <div className="flex justify-between items-center bg-neutral-800 p-4 rounded-lg shadow-lg mt-8">
-            <div className="flex flex-col items-center justify-center ml-4">
-                <h2 className="text-2xl font-semibold mb-4">Magic 8-Ball</h2>
-                <input
-                    type="text"
-                    value={question}
-                    onChange={(e) => setQuestion(e.target.value)}
-                    placeholder="Ask your question..."
-                    className="px-4 py-2 border rounded-lg focus:outline-none bg-neutral-800"
-                />
+        <GenericCard>
+            <div className="grid md:grid-cols-3 gap-4">
+                {/* Column 1: Title and Input */}
+                <div className="flex flex-col items-center justify-center md:ml-6">
+                    <h2 className="text-2xl font-semibold mb-4">Magic 8-Ball</h2>
+                    <input
+                        type="text"
+                        value={question}
+                        onChange={(e) => setQuestion(e.target.value)}
+                        placeholder="Ask your question..."
+                        className="px-4 py-2 border rounded-lg focus:outline-none bg-neutral-800"
+                    />
+                </div>
+
+                {/* Column 2: Answer Circle */}
+                <div className="flex items-center justify-center">
+                    <div
+                        className="w-36 h-36 bg-black rounded-full flex items-center justify-center text-center text-lg ring-2 ring-neutral-900">
+                        {answer || "Ask me anything!"}
+                    </div>
+                </div>
+
+                {/* Column 3: Button */}
+                <div className="flex items-center justify-center md:ml-4">
+                    <button
+                        onClick={shakeBall}
+                        className="px-4 py-2 bg-indigo-500 rounded-lg shadow-md hover:bg-indigo-600 transition-all"
+                    >
+                        Shake the Ball
+                    </button>
+                </div>
             </div>
-            <div
-                className="ml-6 mr-6 w-36 h-36 bg-black rounded-full flex items-center justify-center text-center text-lg ring-2 ring-neutral-900">
-                {answer || "Ask me anything!"}
-            </div>
-            <button
-                onClick={shakeBall}
-                className="px-4 py-2 bg-indigo-500 rounded-lg shadow-md hover:bg-indigo-600 transition-all mr-4"
-            >
-                Shake the Ball
-            </button>
-        </div>
+        </GenericCard>
     );
+
 };
 
 export default Magic8Ball;

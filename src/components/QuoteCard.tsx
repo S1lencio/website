@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import GenericCard from "@/components/GenericCard";
 
 const QuoteCard = () => {
 
@@ -21,14 +22,14 @@ const QuoteCard = () => {
     }, []);
 
     return (
-        <div className="bg-neutral-800 p-6 rounded-lg shadow-lg mt-8">
-            <h2 className="text-center text-2xl font-semibold">Fact of the day</h2>
-            <div className="text-center text-lg italic mt-6 flex items-center justify-center">
+        <GenericCard className="text-center">
+            <h2 className="text-2xl font-semibold whitespace-nowrap">Fact of the day</h2>
+            <div className="text-lg italic mt-6 flex items-center justify-center">
                 <span className="text-4xl mr-2 text-indigo-500">&ldquo;</span>
                 <span>{quote}</span>
                 <span className="text-4xl ml-2 text-indigo-500">&rdquo;</span>
             </div>
-            <div className="text-center mt-4">
+            <div className="mt-4">
                 <a
                     href={permalink}
                     target="_blank"
@@ -38,7 +39,7 @@ const QuoteCard = () => {
                     Source
                 </a>
             </div>
-        </div>
+        </GenericCard>
     );
 
 };

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import GenericCard from "@/components/GenericCard";
 
 const CounterCard = () => {
     const [count, setCount] = useState("-1");
@@ -29,8 +30,8 @@ const CounterCard = () => {
     }, []);
 
     return (
-        <div className="flex flex-col items-center bg-neutral-800 p-6 rounded-lg shadow-lg mt-8">
-            <h2 className="text-2xl font-semibold">Big number go uppies :)</h2>
+        <GenericCard className="flex flex-col items-center">
+            <h2 className="text-2xl font-semibold whitespace-nowrap">Big number go uppies</h2>
             <h2 className="text-lg mt-4">{count}</h2>
             <button
                 onClick={increment} disabled={isLoading}
@@ -38,7 +39,7 @@ const CounterCard = () => {
             >
                 The button
             </button>
-        </div>
+        </GenericCard>
     );
 }
 

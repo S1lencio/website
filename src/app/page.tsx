@@ -18,9 +18,11 @@ export default function Page() {
             </noscript>
 
             <QuoteCard/>
-            <div className="flex justify-between">
-                <Magic8Ball/>
-                <CounterCard/>
+
+            {/* Adjust the flex container for responsiveness */}
+            <div className="flex flex-col md:flex-row md:space-x-4">
+                <Magic8Ball />
+                <CounterCard />
             </div>
         </div>
     );
