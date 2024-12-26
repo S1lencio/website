@@ -10,7 +10,7 @@ const GPGCard = () => {
                     href={`/cdn/silencio_public.asc`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-600"
+                    className="text-blue-400 hover:text-blue-600 transition-all"
                 >
                     Download Key
                 </a>
@@ -19,7 +19,7 @@ const GPGCard = () => {
                     href={`/cdn/gpg_fingerprint.txt`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-600"
+                    className="text-blue-400 hover:text-blue-600 transition-all"
                 >
                     Fingerprint
                 </a>
