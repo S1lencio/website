@@ -51,6 +51,14 @@ const projects = [
             { url: "https://cplaiz.github.io/ActiveCraft-Core/", type: "docs" },
         ],
     },
+    {
+        title: "Translate-inator 9000",
+        language: "nextjs",
+        description: "A bulk translator that scrapes Google Translate for results because I dont want to use an API key. It accepts any input language. Also dont snitch on me :3",
+        links: [
+            { url: "/translator", type: "demo" },
+        ],
+    },
 ];
 
 export default projects;

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const linkTypeLabels: { [key: string]: string } = {
     github: "GitHub",
@@ -40,18 +41,26 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, description, links, langua
                     const label = linkTypeLabels[link.type] || "Link"; // Get the label based on the link type
 
                     return (
-                        <a
-                            key={index}
-                            href={link.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="mr-4"
-                        >
-                            {/* Render the brackets with a different color */}
-                            <span className="text-gray-400">[ </span>
-                            <span className="text-white hover:underline">{label}</span>
+                        <span key={index} className="mr-4">
+                        <span className="text-gray-400">[ </span>
+                            {link.url.startsWith("/") ? (
+                                // Internal link using Next.js Link
+                                <Link href={link.url} className="text-white hover:underline">
+                                    {label}
+                                </Link>
+                            ) : (
+                                // External link using <a> tag
+                                <a
+                                    href={link.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-white hover:underline"
+                                >
+                                    {label}
+                                </a>
+                            )}
                             <span className="text-gray-400"> ]</span>
-                        </a>
+                        </span>
                     );
                 })}
             </div>
