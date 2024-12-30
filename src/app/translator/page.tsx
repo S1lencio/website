@@ -22,7 +22,6 @@ const languages = [
     { name: "Czech", code: "cs" },
     { name: "Danish", code: "da" },
     { name: "Dutch", code: "nl" },
-    { name: "English", code: "en" },
     { name: "Estonian", code: "et" },
     { name: "Finnish", code: "fi" },
     { name: "French", code: "fr" },
@@ -115,39 +114,47 @@ const TranslateAllPage = () => {
             alert("Text exceeds 100 characters. Please shorten it.");
             return;
         }
+
         setLoading(true);
         cancelled.current = false; // Reset cancellation state
-        setTranslations([]); // Clear previous translations and errors
-        setCompletedTranslations(0); // Reset completed translations count
+        setTranslations([]); // Clear previous translations
+        setCompletedTranslations(0); // Reset count
+
+        const fetchTranslation = async (name: string, code: string, delay: number): Promise<{ language: string; translation?: string }> => {
+            return new Promise((resolve) => {
+                setTimeout(async () => {
+                    try {
+                        const res = await fetch(
+                            `https://translate.devlencio.workers.dev/?text=${encodeURIComponent(text)}&target=${code}`
+                        );
+                        const data = await res.json();
+
+                        resolve({
+                            language: name,
+                            translation: res.ok && data.translation ? data.translation : undefined,
+                        });
+                    } catch {
+                        resolve({ language: name }); // Fallback on any error
+                    }
+                }, delay);
+            });
+        };
 
         try {
             for (let i = 0; i < languages.length; i++) {
-                console.log("Translating to", languages[i].name + ". Is it cancelled?", cancelled);
-                if (cancelled.current) break; // Stop if cancelled
+                if (cancelled.current) break;
+
                 const { name, code } = languages[i];
-                const response = await new Promise<{ language: string; translation?: string; error?: string }>((resolve) =>
-                    setTimeout(async () => {
-                        try {
-                            const res = await fetch(`https://translate.devlencio.workers.dev/?text=${encodeURIComponent(text)}&target=${code}`);
-                            const data = await res.json();
+                const delay = (i % 4) * 250; // Stagger requests
+                const response = await fetchTranslation(name, code, delay);
 
-                            if (res.ok && data.translation) {
-                                resolve({ language: name, translation: data.translation });
-                            } else {
-                                resolve({ language: name, error: "failed" });
-                            }
-                        } catch (err) {
-                            resolve({ language: name, error: `failed: ${err.message}` });
-                        }
-                    }, (i % 4) * 250) // Stagger requests at 4 per second
-                );
-
-                // Add translation or error to the list
-                setTranslations((prevTranslations) => [
-                    ...prevTranslations,
-                    response.translation
-                        ? { language: response.language, translation: response.translation }
-                        : { language: response.language, translation: `failed: ${response.error}` },
+                // Add translation or "failed" message to the list
+                setTranslations((prev) => [
+                    ...prev,
+                    {
+                        language: response.language,
+                        translation: response.translation ?? "Failed",
+                    },
                 ]);
 
                 setCompletedTranslations((prev) => prev + 1);
@@ -159,12 +166,13 @@ const TranslateAllPage = () => {
         }
     };
 
+
     const handleCancel = () => {
         cancelled.current = true; // Set the cancellation flag
     };
 
     return (
-        <div className="p-6 max-w-full mx-auto">
+        <div>
             <h1 className="text-2xl font-bold mb-4 text-center">Translate to (totally) all Languages</h1>
 
             {/* Textarea Input */}
@@ -206,7 +214,7 @@ const TranslateAllPage = () => {
                             <li
                                 key={index}
                                 className={`flex justify-between items-center p-4 rounded-lg shadow-lg ${
-                                    translation.startsWith("failed")
+                                    translation === "Failed"
                                         ? "bg-neutral-800 text-red-500"
                                         : "bg-neutral-800"
                                 }`}
@@ -215,9 +223,6 @@ const TranslateAllPage = () => {
                                     <strong className="text-sm font-semibold">{language}:</strong>
                                     <span className="text-sm">{translation}</span>
                                 </div>
-                                {translation.startsWith("failed") && (
-                                    <div className="text-red-500 text-lg font-bold">Failed</div>
-                                )}
                             </li>
                         ))}
                     </ul>
