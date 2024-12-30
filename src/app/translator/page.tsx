@@ -277,14 +277,14 @@ const TranslateAllPage = () => {
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 placeholder="Enter text to translate..."
-                className="block mx-auto w-1/2 h-24 px-4 py-2 border rounded-lg focus:outline-none bg-neutral-700 mb-4 resize-none"
+                className="block mx-auto md:w-1/2 h-24 px-4 py-2 border rounded-lg focus:outline-none bg-neutral-700 mb-4 resize-none"
             />
 
 
             {/* Translate Button */}
             <button
                 onClick={handleTranslate}
-                className="block mx-auto w-1/2 px-4 py-2 bg-indigo-500 rounded-lg shadow-md hover:bg-indigo-600 transition-all disabled:bg-indigo-600"
+                className="block mx-auto md:w-1/2 px-4 py-2 bg-indigo-500 rounded-lg shadow-md hover:bg-indigo-600 transition-all disabled:bg-indigo-600"
                 disabled={loading}
             >
                 {loading ? "Translating..." : "Translate"}
@@ -293,8 +293,7 @@ const TranslateAllPage = () => {
             {loading && (
                 <button
                     onClick={handleCancel}
-                    className="block mx-auto w-1/2 mt-2 px-4 py-2 bg-red-500 text-white rounded-lg"
-                    disabled={cancelled.current}
+                    className="block mx-auto md:w-1/2 mt-2 px-4 py-2 bg-red-500 hover:bg-red-600 transition-all rounded-lg"
                 >
                     Cancel Translation
                 </button>
