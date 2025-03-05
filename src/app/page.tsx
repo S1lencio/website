@@ -6,6 +6,7 @@ import QuoteCard from "@/components/QuoteCard";
 import MainPageTextCard from "@/components/MainPageTextCard";
 import CounterCard from "@/components/CounterCard";
 import MicroButtonCard from "@/components/88x31Card";
+import WebringCard from "@/components/WebringCard";
 
 export default function Page() {
     return (
@@ -20,12 +21,13 @@ export default function Page() {
 
             <QuoteCard/>
 
-            {/* Adjust the flex container for responsiveness */}
             <div className="flex flex-col md:flex-row md:space-x-4">
                 <Magic8Ball />
                 <CounterCard />
             </div>
+
             <MicroButtonCard />
+            <WebringCard />
         </div>
     );
 }
