@@ -1,4 +1,5 @@
 import { getAllSlugs, getPostBySlug } from "@/utils/loadPosts";
+import { notFound } from "next/navigation";
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -6,7 +7,7 @@ interface PageProps {
 
 export async function generateStaticParams() {
     // Fetch all available slugs
-    const slugs = await getAllSlugs();
+    const slugs = getAllSlugs();
 
     // Return an array of params objects
     return slugs.map((slug) => ({
@@ -16,8 +17,12 @@ export async function generateStaticParams() {
 
 export default async function BlogPost({ params }: PageProps) {
     const { slug } = await params;
-    // Fetch the post content and metadata
-    const { data, content } = await getPostBySlug(slug);
+
+    const post = await getPostBySlug(slug);
+
+    if (!post) { notFound(); }
+
+    const { data, content } = post;
 
     return (
         <div>
@@ -27,7 +32,7 @@ export default async function BlogPost({ params }: PageProps) {
             {/* Horizontal separator */}
             <hr className="my-6 border-t-2 border-neutral-500"/>
 
-            <article className="prose prose-invert max-w-none">
+            <article className="prose prose-invert prose-sm max-w-none">
                 <div dangerouslySetInnerHTML={{ __html: content }}/>
             </article>
         </div>

@@ -277,7 +277,7 @@ const TranslateAllPage = () => {
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 placeholder="Enter text to translate..."
-                className="block mx-auto md:w-1/2 h-24 px-4 py-2 border rounded-lg focus:outline-none bg-neutral-700 mb-4 resize-none"
+                className="block mx-auto md:w-1/2 h-24 px-4 py-2 border rounded-lg focus:outline-hidden bg-neutral-700 mb-4 resize-none"
             />
 
 

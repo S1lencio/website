@@ -91,7 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
             <link rel="icon" id="favicon" type="image/gif" href="/favicon.gif"/>
 
-            <meta property="og:title" content="Devlencio"/>
+            <meta property="og:title" content="Silencios site"/>
             <meta property="og:description" content="Click for free robux!!!1"/>
             <meta property="og:type" content="website"/>
             <meta property="og:url" content="https://devlencio.net"/>
@@ -103,7 +103,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <body>
         <div className="flex min-h-screen bg-neutral-900">
             {/* Left gradient block */}
-            <div className="hidden md:block w-1/5 bg-gradient-to-r from-zinc-800 to-neutral-900 to-90%"></div>
+            <div className="hidden md:block w-1/5 bg-linear-to-r from-zinc-800 to-neutral-900 to-90%"></div>
 
             {/* Main content */}
             <div className="w-full md:w-3/5 bg-neutral-700 md:p-6 md:rounded-t-md md:mt-10 p-2">
@@ -112,7 +112,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
 
             {/* Right gradient block */}
-            <div className="hidden md:block w-1/5 bg-gradient-to-r from-neutral-900 from-10% to-zinc-800"></div>
+            <div className="hidden md:block w-1/5 bg-linear-to-r from-neutral-900 from-10% to-zinc-800"></div>
         </div>
         </body>
 

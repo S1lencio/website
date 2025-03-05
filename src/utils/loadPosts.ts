@@ -3,7 +3,6 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from 'remark'
 import html from 'remark-html'
-import { notFound } from "next/navigation";
 
 const postsDirectory = path.join(process.cwd(), "src/content/posts");
 
@@ -47,18 +46,12 @@ export async function getPostBySlug(slug: string) {
     try {
         const fileContents = fs.readFileSync(fullPath, "utf-8")
         const { data, content } = matter(fileContents) // Extract frontmatter and content
-
-        const htmlContent = await remark()
-            .use(html)
-            .process(content)
-        const contentHtml = htmlContent.toString()
+        const htmlContent = await remark().use(html).process(content)
 
         return {
             data,
-            content: contentHtml,
+            content: htmlContent.toString(),
         };
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (error) {
-        notFound()
-    }
+    } catch { return null; }
 }

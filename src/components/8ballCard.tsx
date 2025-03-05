@@ -39,7 +39,7 @@ const Magic8Ball = () => {
                         value={question}
                         onChange={(e) => setQuestion(e.target.value)}
                         placeholder="Ask your question..."
-                        className="px-4 py-2 border rounded-lg focus:outline-none bg-neutral-800"
+                        className="px-4 py-2 border rounded-lg focus:outline-hidden bg-neutral-800"
                     />
                 </div>
 
