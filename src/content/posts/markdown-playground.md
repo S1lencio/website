@@ -25,8 +25,7 @@ date: "1337-01-01"
     * [Backslash Escapes](#backslash)
     * [Automatic Links](#autolink)
 
-**Note:** This document is itself written using Markdown; you
-can [see the source for it by adding '.text' to the URL](/projects/markdown/syntax.text).
+**Note:** This document is itself written using Markdown.
 
 ----
 
@@ -307,7 +306,7 @@ __double underscores__
 
 ### Code
 
-To indicate a span of code, wrap it with backtick quotes (`` ` ``).
+To indicate a span of code, wrap it with backtick quotes (`).
 Unlike a pre-formatted code block, a code span indicates code within a
 normal paragraph. For example:
 
