@@ -5,6 +5,7 @@ import Magic8Ball from "@/components/8ballCard";
 import QuoteCard from "@/components/QuoteCard";
 import MainPageTextCard from "@/components/MainPageTextCard";
 import CounterCard from "@/components/CounterCard";
+import MicroButtonCard from "@/components/88x31Card";
 
 export default function Page() {
     return (
@@ -13,7 +14,7 @@ export default function Page() {
 
             <noscript>
                 <div className="text-center mt-8 text-red-500">
-                    JavaScript is disabled in your browser. These features will not work.
+                    JavaScript is disabled. Due to this website being deployed statically, some functions will not work correctly.
                 </div>
             </noscript>
 
@@ -24,6 +25,7 @@ export default function Page() {
                 <Magic8Ball />
                 <CounterCard />
             </div>
+            <MicroButtonCard />
         </div>
     );
 }
