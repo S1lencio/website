@@ -7,7 +7,7 @@ const GPGCard = () => {
             <div>
                 <h3 className="text-xl font-semibold">GPG Key</h3>
                 <a
-                    href={`/cdn/silencio_public.asc`}
+                    href={`/cdn/gpg_key.asc`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-600 transition-all"
