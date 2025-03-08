@@ -11,7 +11,7 @@ const MicroButtonCard = () => {
                 {buttons.map((button, index) => (
                     <a key={index} href={button.website} target="_blank" rel="noopener noreferrer">
                         <Image
-                            src={"/cdn/88x31s/" + button.image}
+                            src={"/cdn/" + button.image}
                             alt={button.website}
                             width={88}
                             height={31}
