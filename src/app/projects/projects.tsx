@@ -1,11 +1,35 @@
 const projects = [
     {
+        title: "Website",
+        language: "nextjs",
+        description: "This website is built with static Nextjs and deployed via Github Pages. This is my first time working with Nextjs or any frontend in general.",
+        links: [
+            { url: "https://github.com/S1lencio/website", type: "github" },
+        ],
+    },
+    {
+        title: "Velocity Plugin",
+        language: "java",
+        description: "A Minecraft Velocity plugin tailored to my network. It will not work on your server, but be my guest to do some tactical communism in my code.",
+        links: [
+            { url: "https://github.com/S1lencio/CustomPlugin", type: "github" },
+        ],
+    },
+    {
         title: "No Join Leave Message",
         language: "java",
         description: "Quick and dirty Minecraft Fabric mod that disabled joining and leaving messages.",
         links: [
             { url: "https://github.com/S1lencio/No-Join-Leave-Message", type: "github" },
             { url: "https://modrinth.com/mod/no-join-leave-messages", type: "modrinth" },
+        ],
+    },
+    {
+        title: "Neon",
+        language: "java",
+        description: "A Minecraft Fabric hacked client that I made to play on LiveOverflow's server. A lot of this code is 'borrowed' from other clients as this was my learning project.",
+        links: [
+            { url: "https://github.com/S1lencio/neon", type: "github" },
         ],
     },
     {
@@ -23,22 +47,6 @@ const projects = [
         description: "A very bad and probably non functional Discord bot written in Python. The Framework I made is really nice :)",
         links: [
             { url: "https://github.com/S1lencio/DiscordBot", type: "github" },
-        ],
-    },
-    {
-        title: "Neon",
-        language: "java",
-        description: "A Minecraft Fabric hacked client that I made to play on LiveOverflow's server. A lot of this code is 'borrowed' from other clients as this was my learning project.",
-        links: [
-            { url: "https://github.com/S1lencio/neon", type: "github" },
-        ],
-    },
-    {
-        title: "Website",
-        language: "nextjs",
-        description: "This website is built with static Nextjs and deployed via Github Pages. This is my first time working with Nextjs or any frontend in general.",
-        links: [
-            { url: "https://github.com/S1lencio/website", type: "github" },
         ],
     },
     {
