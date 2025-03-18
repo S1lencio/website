@@ -9,8 +9,8 @@ import Image from "next/image";
 export default function ProjectsPage() {
     return (
         <div>
-            <h1 className="text-2xl">Me do silly things :3</h1>
-            <p className="mt-2">Here are some of the projects I have worked on.</p>
+            <h1 className="text-2xl">Obligatory projects page</h1>
+            <p className="mt-2">Here are some of the things I have worked on.</p>
 
             <div className="mt-4">
                 {projects.map((project, index) => (
