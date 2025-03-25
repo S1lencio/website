@@ -2,7 +2,7 @@ const projects = [
     {
         title: "Website",
         language: "nextjs",
-        description: "This website is built with static Nextjs and deployed via Github Pages. This is my first time working with Nextjs or any frontend in general.",
+        description: "This website is built with static Nextjs and deployed via Cloudflare Pages. This is my first time working with Nextjs or any frontend in general.",
         links: [
             { url: "https://github.com/S1lencio/website", type: "github" },
         ],
