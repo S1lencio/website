@@ -42,6 +42,15 @@ const projects = [
         ],
     },
     {
+        title: "Better Beacon Range",
+        language: "java",
+        description: "Small Minecraft Fabric mod that makes the beacon effect range configurable.",
+        links: [
+            { url: "https://github.com/S1lencio/Better-Beacon-Range", type: "github" },
+            { url: "https://modrinth.com/mod/better-beacon-range-was-taken", type: "modrinth" },
+        ],
+    },
+    {
         title: "Bad Discord Bot",
         language: "python",
         description: "A very bad and probably non functional Discord bot written in Python. The Framework I made is really nice :)",
