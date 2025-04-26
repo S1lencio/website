@@ -69,7 +69,7 @@ export const buttons = [
     },
     {
         "image": "88x31s/paddyk45.png",
-        "website": "https://binarytr.ee/",
+        "website": "https://paddy.li/",
     },
     {
         "image": "88x31s/cornbread.png",
