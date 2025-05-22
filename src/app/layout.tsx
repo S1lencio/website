@@ -91,7 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
             <link rel="icon" id="favicon" type="image/gif" href="/favicon.gif"/>
 
-            <meta property="og:title" content="Silencios site"/>
+            <meta property="og:title" content="Coinflipcoders site"/>
             <meta property="og:description" content="Click for free robux!!!1"/>
             <meta property="og:type" content="website"/>
             <meta property="og:url" content="https://devlencio.net"/>

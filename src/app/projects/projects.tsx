@@ -4,7 +4,7 @@ const projects = [
         language: "nextjs",
         description: "This website is built with static Nextjs and deployed via Cloudflare Pages. This is my first time working with Nextjs or any frontend in general.",
         links: [
-            { url: "https://github.com/S1lencio/website", type: "github" },
+            { url: "https://github.com/coinflipcoder/website", type: "github" },
         ],
     },
     {
@@ -12,7 +12,7 @@ const projects = [
         language: "java",
         description: "A Minecraft Velocity plugin tailored to my network. It will not work on your server, but be my guest to do some tactical communism in my code.",
         links: [
-            { url: "https://github.com/S1lencio/CustomPlugin", type: "github" },
+            { url: "https://github.com/coinflipcoder/CustomPlugin", type: "github" },
         ],
     },
     {
@@ -20,7 +20,7 @@ const projects = [
         language: "java",
         description: "Quick and dirty Minecraft Fabric mod that disabled joining and leaving messages.",
         links: [
-            { url: "https://github.com/S1lencio/No-Join-Leave-Message", type: "github" },
+            { url: "https://github.com/coinflipcoder/No-Join-Leave-Message", type: "github" },
             { url: "https://modrinth.com/mod/no-join-leave-messages", type: "modrinth" },
         ],
     },
@@ -29,7 +29,7 @@ const projects = [
         language: "java",
         description: "A Minecraft Fabric hacked client that I made to play on LiveOverflow's server. A lot of this code is 'borrowed' from other clients as this was my learning project.",
         links: [
-            { url: "https://github.com/S1lencio/neon", type: "github" },
+            { url: "https://github.com/coinflipcoder/neon", type: "github" },
         ],
     },
     {
@@ -37,7 +37,7 @@ const projects = [
         language: "java",
         description: "Small Minecraft Paper plugin that makes the dragon fight harder.",
         links: [
-            { url: "https://github.com/S1lencio/Harder-Dragon", type: "github" },
+            { url: "https://github.com/coinflipcoder/Harder-Dragon", type: "github" },
             { url: "https://modrinth.com/plugin/harder-dragon", type: "modrinth" },
         ],
     },
@@ -46,7 +46,7 @@ const projects = [
         language: "java",
         description: "Small Minecraft Fabric mod that makes the beacon effect range configurable.",
         links: [
-            { url: "https://github.com/S1lencio/Better-Beacon-Range", type: "github" },
+            { url: "https://github.com/coinflipcoder/Better-Beacon-Range", type: "github" },
             { url: "https://modrinth.com/mod/better-beacon-range-was-taken", type: "modrinth" },
         ],
     },
@@ -55,7 +55,7 @@ const projects = [
         language: "python",
         description: "A very bad and probably non functional Discord bot written in Python. The Framework I made is really nice :)",
         links: [
-            { url: "https://github.com/S1lencio/DiscordBot", type: "github" },
+            { url: "https://github.com/coinflipcoder/DiscordBot", type: "github" },
         ],
     },
     {

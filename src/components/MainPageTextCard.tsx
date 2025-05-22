@@ -6,7 +6,7 @@ const MainPageTextCard = () => {
         <div>
             <h1 className="text-2xl">Hello there :3</h1>
             <h2 className="mt-2">
-                I am Silencio, a young and naive programmer from Germany who will retreat to the backend upon spotting a
+                I am Coinflipcoder, a young and naive programmer from Germany who will retreat to the backend upon spotting a
                 css class.
                 Its nice to meet you! On this page you will find various random things I have done over the years. Enjoy
                 your stay!
