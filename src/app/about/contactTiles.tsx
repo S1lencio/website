@@ -13,9 +13,9 @@ const contactLinks = [
     },
     {
         platform: "GitHub",
-        url: "https://github.com/S1lencio",
+        url: "https://github.com/coinflipcoder",
         icon: "󰊤 ",
-        name: "S1lencio"
+        name: "Coinflipcoder"
     },
 ];
 
